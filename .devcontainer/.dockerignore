@@ -1,0 +1,15 @@
+.git
+.gitignore
+node_modules
+tmp
+log
+storage
+public/packs
+public/packs-test
+coverage
+.byebug_history
+*.gem
+.DS_Store
+.env*
+.idea
+.vscode

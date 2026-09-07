@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  stimulus_html: MyText
+  prompt_html: MyText
+  marks: 1
+  estimated_minutes: 1
+  is_parameterizable: false
+  item_type: MyString
+  difficulty_nominal: 1
+  content_hash: MyString
+  usage_count: 1
+  department: one
+  author: one
+  parent: one
+  node_type: 1
+  status: 1
+
+two:
+  title: MyString
+  stimulus_html: MyText
+  prompt_html: MyText
+  marks: 1
+  estimated_minutes: 1
+  is_parameterizable: false
+  item_type: MyString
+  difficulty_nominal: 1
+  content_hash: MyString
+  usage_count: 1
+  department: two
+  author: two
+  parent: two
+  node_type: 1
+  status: 1

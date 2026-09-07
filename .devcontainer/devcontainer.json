@@ -1,0 +1,60 @@
+{
+  "name": "Papercraft (Rails + React + LaTeX)",
+  "dockerComposeFile": "../.devcontainer/docker-compose.yml",
+  "service": "app",
+  "shutdownAction": "stopCompose",
+  "workspaceFolder": "/app",
+  "forwardPorts": [
+    3000,
+    5173,
+    6379
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "Rails (Puma)"
+    },
+    "5173": {
+      "label": "Vite (HMR)"
+    },
+    "6379": {
+      "label": "Redis"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rebornix.ruby",
+        "kaiwood.endwise",
+        "castwide.solargraph",
+        "shopify.ruby-lsp",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "mutantdino.resourcemonitor"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "ruby.format": "rubocop",
+        "ruby.lsp": true,
+        "solargraph.diagnostics": true,
+        "solargraph.formatting": true,
+        "eslint.enable": true,
+        "[ruby]": {
+          "editor.defaultFormatter": "rebornix.ruby"
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[typescriptreact]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  }
+}

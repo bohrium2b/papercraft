@@ -1,0 +1,50 @@
+# PostgreSQL. Versions 9.5 and up are supported.
+#
+# Install the pg driver:
+#   gem install pg
+# On macOS with Homebrew:
+#   gem install pg -- --with-pg-config=/opt/homebrew/bin/pg_config
+# On Windows:
+#   gem install pg
+#       Choose the win32 build.
+#       Install PostgreSQL and put its /bin directory on your path.
+#
+# Configure Using Gemfile
+# gem "pg"
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: papercraft
+  password: papercraft
+  host: localhost
+  port: 5432
+
+
+development:
+  <<: *default
+  database: papercraft_development
+
+test:
+  <<: *default
+  database: papercraft_test
+
+production:
+  primary: &primary_production
+    <<: *default
+    database: papercraft_production
+    username: papercraft
+    password: <%= ENV["PAPERCRAFT_DATABASE_PASSWORD"] %>
+  cache:
+    <<: *primary_production
+    database: papercraft_production_cache
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *primary_production
+    database: papercraft_production_queue
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *primary_production
+    database: papercraft_production_cable
+    migrations_paths: db/cable_migrate

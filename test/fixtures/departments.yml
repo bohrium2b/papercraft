@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  organization: one
+  latex_preamble: MyText
+  mark_scheme_config: 
+  template_config: 
+
+two:
+  name: MyString
+  organization: two
+  latex_preamble: MyText
+  mark_scheme_config: 
+  template_config: 

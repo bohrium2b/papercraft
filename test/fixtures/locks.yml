@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lock_key: MyString
+  resource_type: MyString
+  resource_id: 1
+  user: one
+  expires_at: 2026-09-06 20:08:44
+
+two:
+  lock_key: MyString
+  resource_type: MyString
+  resource_id: 1
+  user: two
+  expires_at: 2026-09-06 20:08:44
